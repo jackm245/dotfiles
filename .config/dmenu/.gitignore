@@ -1,0 +1,4 @@
+*.o
+larbs.mom
+dmenu
+stest
