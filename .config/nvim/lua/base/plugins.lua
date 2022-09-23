@@ -92,29 +92,29 @@ return require('packer').startup(function(use)
   use {'mboughaba/i3config.vim'}
 
 
-  use {
-    'hrsh7th/nvim-cmp',
-    requires = {
-        { "hrsh7th/cmp-buffer" },
-        { "hrsh7th/cmp-nvim-lsp" },
-        { "hrsh7th/cmp-path" },
-        { "hrsh7th/cmp-nvim-lua" },
-        { "ray-x/cmp-treesitter" },
-        { "hrsh7th/nvim-cmp" },
-        { "hrsh7th/cmp-vsnip" },
-        { "hrsh7th/vim-vsnip" },
-        { "Saecki/crates.nvim" },
-        { "f3fora/cmp-spell" },
-        -- { "hrsh7th/cmp-cmdline" },
-        { "tamago324/cmp-zsh" },
-    },
-    config = function()
-      require('core.jv-nvimcmp')
-  end,
-  }
+  -- use {
+    -- 'hrsh7th/nvim-cmp',
+    -- requires = {
+        -- { "hrsh7th/cmp-buffer" },
+        -- { "hrsh7th/cmp-nvim-lsp" },
+        -- { "hrsh7th/cmp-path" },
+        -- { "hrsh7th/cmp-nvim-lua" },
+        -- { "ray-x/cmp-treesitter" },
+        -- { "hrsh7th/nvim-cmp" },
+        -- { "hrsh7th/cmp-vsnip" },
+        -- { "hrsh7th/vim-vsnip" },
+        -- { "Saecki/crates.nvim" },
+        -- { "f3fora/cmp-spell" },
+        -- -- { "hrsh7th/cmp-cmdline" },
+        -- { "tamago324/cmp-zsh" },
+    -- },
+    -- config = function()
+      -- require('core.jv-nvimcmp')
+  -- end,
+  -- }
 
   use {"wbthomason/lsp-status.nvim"}
-  use {"saadparwaiz1/cmp_luasnip"}
+  -- use {"saadparwaiz1/cmp_luasnip"}
   use {"onsails/lspkind-nvim"}
   use {'neovim/nvim-lspconfig'}
   use {"ray-x/lsp_signature.nvim",
@@ -179,13 +179,14 @@ return require('packer').startup(function(use)
     end
   }
 
+  use { "ellisonleao/gruvbox.nvim" }
   -- use {'sainnhe/everforest'}
-  use {
-    'navarasu/onedark.nvim',
-    config = function()
-        require('core.jv-onedark')
-    end
-  }
+  -- use {
+    -- 'navarasu/onedark.nvim',
+    -- config = function()
+        -- require('core.jv-onedark')
+    -- end
+  -- }
   -- use ({
       -- 'oncomouse/lushwal',
       -- requires = { { 'rktjmp/lush.nvim', opt = true }, { 'rktjmp/shipwright.nvim', opt = true } },

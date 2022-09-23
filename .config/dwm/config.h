@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+#include "X11/XF86keysym.h"
 
 /* Constants */
 #define TERMINAL "st"
@@ -28,14 +29,12 @@ static char *fonts[]      = {
     "Font Awesome 5 Free:style=Solid:pixelsize=14;1",
     "Font Awesome 5 Brands:pixelsize=14;1",
 };
-static char normbgcolor[]           = "#0c0e15";
-static char normbordercolor[]       = "#455574";
-static char normfgcolor[]           = "#6c7d9c";
-static char selfgcolor[]            = "#0c0e15";
-static char selbordercolor[]        = "#c75ae8";
-static char selbgcolor[]        = "#c75ae8";
-// static char selbgcolor[]            = "#af5fff";
-// static char selbgcolor[]            = "#af5fff";
+static char normbgcolor[]           = "#282828";
+static char normbordercolor[]       = "#928374";
+static char normfgcolor[]           = "#ebdbb2";
+static char selfgcolor[]            = "#282828";
+static char selbordercolor[]        = "#b8bb26";
+static char selbgcolor[]        = "#928374";
 static char *colors[][3] = {
        // [>               fg           bg           border   <]
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
@@ -173,10 +172,10 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_Tab,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_q,		killclient,	{0} },
 	{ MODKEY|ShiftMask,		XK_q,		spawn,		SHCMD("pkill dwm") },
-	{ MODKEY,			XK_w,		spawn,		SHCMD("brave") },
-	{ MODKEY|ShiftMask,		XK_w,		spawn,		SHCMD(TERMINAL " -e sudo nmtui") },
-	{ MODKEY,			XK_e,		spawn,		SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook") },
-	{ MODKEY|ShiftMask,		XK_e,		spawn,		SHCMD(TERMINAL " -e abook -C ~/.config/abook/abookrc --datafile ~/.config/abook/addressbook") },
+	{ MODKEY,			XK_w,		spawn,		SHCMD("brave-browser-nightly") },
+	// { MODKEY|ShiftMask,		XK_w,		spawn,		SHCMD(TERMINAL " -e sudo nmtui") },
+	// { MODKEY,			XK_e,		spawn,		SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook") },
+	// { MODKEY|ShiftMask,		XK_e,		spawn,		SHCMD(TERMINAL " -e abook -C ~/.config/abook/abookrc --datafile ~/.config/abook/addressbook") },
 	{ MODKEY,			XK_r,		spawn,		SHCMD(TERMINAL " -e lf") },
 	{ MODKEY|ShiftMask,		XK_r,		spawn,		SHCMD(TERMINAL " -e htop") },
 	{ MODKEY,			XK_t,		setlayout,	{.v = &layouts[0]} }, /* tile */
@@ -190,11 +189,11 @@ static Key keys[] = {
 	{ MODKEY,			XK_o,		incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_o,		incnmaster,     {.i = -1 } },
 	{ MODKEY,			XK_p,			spawn,		SHCMD("./.scripts/spotify/spotify.sh") },
-	{ MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("mpc pause ; pauseallmpv") },
-	{ MODKEY,			XK_bracketleft,		spawn,		SHCMD("mpc seek -10") },
-	{ MODKEY|ShiftMask,		XK_bracketleft,		spawn,		SHCMD("mpc seek -60") },
-	{ MODKEY,			XK_bracketright,	spawn,		SHCMD("mpc seek +10") },
-	{ MODKEY|ShiftMask,		XK_bracketright,	spawn,		SHCMD("mpc seek +60") },
+	// { MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("mpc pause ; pauseallmpv") },
+	// { MODKEY,			XK_bracketleft,		spawn,		SHCMD("mpc seek -10") },
+	// { MODKEY|ShiftMask,		XK_bracketleft,		spawn,		SHCMD("mpc seek -60") },
+	// { MODKEY,			XK_bracketright,	spawn,		SHCMD("mpc seek +10") },
+	// { MODKEY|ShiftMask,		XK_bracketright,	spawn,		SHCMD("mpc seek +60") },
 	{ MODKEY,			XK_backslash,		view,		{0} },
 	/* { MODKEY|ShiftMask,		XK_backslash,		spawn,		SHCMD("") }, */
 
@@ -203,7 +202,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_s,		togglesticky,	{0} },
 	/* { MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_d,		spawn,          SHCMD("dmenu_run") },
-	{ MODKEY|ShiftMask,		XK_d,		spawn,		SHCMD("passmenu") },
+	{ MODKEY|ShiftMask,		XK_d,		spawn,		SHCMD("./.scripts/eww/dashboard") },
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
 	{ MODKEY|ShiftMask,		XK_f,		setlayout,	{.v = &layouts[8]} },
 	{ MODKEY,			XK_g,		shiftview,	{ .i = -1 } },

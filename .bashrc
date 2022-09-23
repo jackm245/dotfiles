@@ -74,7 +74,7 @@ if ${use_color} ; then
 	else
 		# PS1='\[\033[01;36m\][\u@\h\[\033[01;37m\] \W\[\033[01;36m\]]\$\[\033[00m\] '
 		# PS1='\[\033[01;36m\] \W ❯\[\033[00m\] '
-		PS1='\[\033[01;35m\] \W ❯\[\033[00m\] '
+		PS1='\[\033[01;32m\] \W ❯\[\033[00m\] '
     fi
 
 
@@ -92,7 +92,8 @@ unset use_color safe_term match_lhs sh
 
 
 xhost +local:root > /dev/null 2>&1
-complete -cf sudo
+# complete -cf sudo
+complete -cf doas
 
 # Bash won't get SIGWINCH if another process is in the foreground.
 # Enable checkwinsize so that bash will check the terminal size when
@@ -110,6 +111,9 @@ shopt -s histappend
 ## ENV Variables ##
 export PATH="/home/jack/.local/bin:$PATH"
 export PATH="/home/jack/.scripts/pypy3.8-v7.3.7-linux64/bin/:$PATH"
+export PATH="/home/jack/.scripts/eww/:$PATH"
+# export PYQTDESIGNERPATH="/home/jack/.scripts/pyqt5_plugins/"
+# export PATH="/home/jack/.scripts/pyqt5_plugins/:$PATH"
 # export PATH="/home/jack/.cargo/bin:$PATH"
 # export PATH="/home/jack/.scripts/paperview/:$PATH"
 #-----------------#

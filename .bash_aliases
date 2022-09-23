@@ -38,22 +38,28 @@ alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
 
-alias nl='c /home/jack/Documents/Programming/Computer\ Science\ Coursework/Latex'
+alias nl='c /home/jack/Documents/Programming/Computer\ Science\ Coursework/LaTeX'
+alias ns='c /home/jack/Documents/Programming/Computer\ Science\ Coursework/src'
 alias ne='nl; evince Visualising\ the\ Riemann\ Hypothesis.pdf &'
 alias nf='nl; zathura Visualising\ the\ Riemann\ Hypothesis.pdf &'
 alias nn='nl; n -c NeoTexOn Visualising\ the\ Riemann\ Hypothesis.tex'
 alias np='c /home/jack/Documents/Programming/Computer\ Science\ Coursework/Prototypes'
+alias nc='nl ; pdflatex Visualising\ the\ Riemann\ Hypothesis.tex ; biber Visualising\ the\ Riemann\ Hypothesis ; pdflatex Visualising\ the\ Riemann\ Hypothesis.tex'
 
 alias jvim-sync='cp -R ~/.config/nvim/. ~/Documents/Github/jvim'
 alias nea-clear='rm -rf ~/Documents/Github/Riemann-Hypothesis/ ; cp -r ~/Documents/Github/Riemann-Hypothesis-Git-Settings/ ~/Documents/Github/Riemann-Hypothesis'
 alias nea-sync='nea-clear;cp -R ~/Documents/Programming/Computer\ Science\ Coursework/. ~/Documents/Github/Riemann-Hypothesis/'
+alias hb='c /home/jack/Documents/Programming/Hex\ Baron/ProgrammingTasks/'
+alias bt='c /home/jack/Documents/Programming/Breakthrough/'
+alias btp='c /home/jack/Documents/Programming/Breakthrough/Programming\ Tasks'
+alias btz='c /home/jack/Documents/Programming/Breakthrough/Programming\ Tasks/ZigZag; zathura CodingTasks.pdf'
 
 alias myip="curl ipinfo.io/ip"
 # alias cp="cp -v"                          # confirm before overwriting something
 alias mv='mv -v'
 # alias rm='rm -v'
 alias mkdir='mkdir -pv'
-alias sdn='sudo shutdown -h now'
+alias sdn='doas shutdown -h now'
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 # alias np='nano -w PKGBUILD'
@@ -61,10 +67,16 @@ alias n='nvim'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias s='startx'
 alias more=less
+# alias sudo=doas
+# alias pls='doas !!'
 # alias untar='tar -zxvf'
 alias sha='shassum -a 256'
+alias h='zathura Desktop/How\ to\ win\ friends\ and\ influence\ people.pdf'
+alias nh='n Desktop/How\ to\ win\ friends\ and\ influence\ people\ NOTES.txt'
 
 alias cls='clear && echo'
-alias clock='tty-clock -C 5 -c'
+alias pls=doas
+alias clock='tty-clock -C 2 -c'
 alias neofetch='neofetch --source ~/.config/neofetch/ascii.txt'
 alias fetch='cls ; neofetch'
+# alias dashboard='. /home/jack/.scripts/eww/launch_dashboard'
